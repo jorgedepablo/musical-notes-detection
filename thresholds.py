@@ -6,8 +6,9 @@ FILE = "src/notes.json"
 NOTES = ['Do', 'Do#/ReB', 'Re', 'Re#/MiB', 'Mi', 'Fa', 'Fa#/SolB', 'Sol',
          'Sol#/LaB', 'La', 'La#/SiB', 'Si']
 OCTAVES_NUM = 5
+TH_MIN = 25
 
-def json2data(file):
+def json2data():
     notes_Dict = {}
     try:
         with open(FILE, 'r') as json_file:
@@ -16,18 +17,30 @@ def json2data(file):
     except FileNotFoundError:
         print("Invalid File Name")
 
-def create_octaves(notes_Dict):
+def create_octaves():
+    notes_Dict = json2data()
     octaves_list = []
-    i = 1
-    for i <= OCTAVES_NUM :
+    for i in range(OCTAVES_NUM):
         aux_Dict = {}
-        aux_Dict = notes_Dict
         for note in NOTES:
-            aux_Dict[note] = notes_Dict[note]*(2**(i-1))
+            fc =  notes_Dict[note]
+            aux_Dict[note] = fc * (2**i)
         octaves_list.append(aux_Dict)
-    print(octaves_list)
+    return(octaves_list)
 
+def get_thresholds():
+    octaves_list = create_octaves()
+    for i in range(len(octaves_list)):
+        for note in NOTES:
+            fc = octaves_list[i][note]
+            if i == 0 and note == 'Do':
+                th = TH_MIN
+            else:
+                th = round((prev_fc + ((fc - prev_fc)/2)), 2)
+            octaves_list[i][note] = (th, octaves_list[i][note])
+            prev_fc = fc
+    return(octaves_list)
 
 if __name__ == '__main__':
-    notes_Dict = json2data(FILE)
-    create_octaves(notes_Dict)
+    thresholds_list = get_thresholds()
+    print(thresholds_list)

@@ -1,8 +1,14 @@
 
--- Encontras suficientes notas musicales limpias en la web que nos recomendaba la prácticas y validarla (y guardarlas en src/notes)
+-- Encontras suficientes notas musicales limpias en la web que nos recomendaba
+   la prácticas y validarla (y guardarlas en src/notes)
 
--- Hacer un json con la frecuencia fundamental de todas las notas de interes y guardarlo en (src)
+-- Hacer un json con la frecuencia fundamental de todas las notas de interes
+   y guardarlo en (src) HECHO
 
--- Hacer un módulo de python al que pasándole el json devuelva un diccionario con todas las notas y los umbrales asociados (.py) 
+-- Hacer un módulo de python al que pasándole el json devuelva un diccionario
+   con todas las notas y los umbrales asociados (.py) HECHO
 
--- Modulo principal (.ipynb) que analice la señal del audio, represente el audio completo y un espectro de la parte enventanada y saque la frecuencia fundamental. Con la frecuencia fundamental se recorra un bucle de lago longitud del diccionario y se quede entre dos umbrales. 
+-- Modulo principal (.ipynb) que analice la señal del audio, represente el
+   audio completo y un espectro de la parte enventanada y saque la frecuencia
+   fundamental. Con la frecuencia fundamental se recorra un bucle de lago
+   longitud del diccionario y se quede entre dos umbrales.
