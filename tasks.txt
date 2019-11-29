@@ -1,6 +1,6 @@
 
 -- Encontras suficientes notas musicales limpias en la web que nos recomendaba
-   la prácticas y validarla (y guardarlas en src/notes)
+   la prácticas y validarla (y guardarlas en src/notes) MEDIO HECHO
 
 -- Hacer un json con la frecuencia fundamental de todas las notas de interes
    y guardarlo en (src) HECHO
@@ -11,4 +11,15 @@
 -- Modulo principal (.ipynb) que analice la señal del audio, represente el
    audio completo y un espectro de la parte enventanada y saque la frecuencia
    fundamental. Con la frecuencia fundamental se recorra un bucle de lago
-   longitud del diccionario y se quede entre dos umbrales.
+   longitud del diccionario y se quede entre dos umbrales. MEDIO HECHO
+
+-- Las notas que hay me dan problemas no se si estan bien etiquetada, creo que
+   internet en general cosidera la primera octava es lo que nosotros llamamos 3
+   investigar bien esta parte para enterarnos, creo que de ahi viene el lio.
+
+-- Queda por hacer la matriz tipo test, investigar una forma mejor de sacar el
+   pitch (el que ahi es el que usó julia el año pasado, no me fio mucho de eso
+   además Rebeca me dijo que estaba la funcion find_peaks pero no se usarla).
+
+-- Recorrerse los umbrales, no es dificil, creo que se como hacerlo, primero
+   centrarse en las otras tareas.
